@@ -195,3 +195,85 @@ Tab:AddButton({
       		loadstring(game:HttpGet("https://github.com/LioK251/Scripts/raw/main/lazyhub.lua"))()
   	end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "Lumber Tycoon 2",
+	Icon = "rbxassetid://16153284135",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Toads",
+	Callback = function()
+      		loadstring(game:HttpGet("https://bit.ly/3x90l99"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Luawareloader",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Buter Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Lumber-Tycoon-2-ButterHub-8098"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Step Lt2",
+	Callback = function()
+      		loadstring(Game:HttpGet("https://bit.ly/StepShopMobile"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Bee Swarm",
+	Icon = "rbxassetid://16153293179",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Astronomic",
+	Callback = function()
+      		loadstring(game:HttpGet("https://astronomic.vercel.app"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Adel Hub",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub/main/Main.lua'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Histy Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Histy"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto Farm",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Kometa Hub",
+	Callback = function()
+      		loadstring(game:HttpGet('https://s.kometa.ga/kometa.lua'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Macro V3",
+	Callback = function()
+      		loadstring(game:HttpGet("https://www.macrov2-script.xyz/macrov3.lua"))()
+  	end    
+})
