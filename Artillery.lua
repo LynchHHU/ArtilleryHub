@@ -277,3 +277,140 @@ Tab:AddButton({
       		loadstring(game:HttpGet("https://www.macrov2-script.xyz/macrov3.lua"))()
   	end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "Muscle Legend",
+	Icon = "rbxassetid://16287447214",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Speed Hub",
+	Callback = function()
+      		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto Farm",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/jynzl/main/main/Musclas%20Legenos.lua'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Mad Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/maddjester/MaddHub/main/GetKey.lua"))() 
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Unnamed Gui",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "VG Hub",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Rolly Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Rolly-Hub-I-6-GAMES-SUPPORTED-4511", true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Ninja Legends",
+	Icon = "rbxassetid://16287415796",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Proxima Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Horizon.cc",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadetamic/horizon/main/loadstring.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "BT Project",
+	Callback = function()
+      		loadstring(game:HttpGet('https://btteam.net/scripts-auth/', true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Pure Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://purehub.xyz/Loader", true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "PWNERHUB",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/PWNERHUB.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Speed Hub",
+	Callback = function()
+      		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Legend Of Speed",
+	Icon = "rbxassetid://16287417881",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Speed Hub",
+	Callback = function()
+      		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto Farm",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/1iMHrZ50", true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Legend Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/mqGPg69N"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Tbao Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHublegendsofspeed"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Project Meow",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Legends-Of-Speed-Speeeeed-Farm-Open-Source-old-code-lel-1785"))()
+  	end    
+})
