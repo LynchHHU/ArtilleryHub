@@ -51,6 +51,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+	Name = "Hitbox Expander",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+  	end    
+})
+
+Tab:AddButton({
 	Name = "Dark Dex V3",
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
