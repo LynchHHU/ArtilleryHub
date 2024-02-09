@@ -79,6 +79,61 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
+	Name = "FE/Troll/Fling",
+	Icon = "rbxassetid://16294158863",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Part Mover",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://pastefy.app/Vcuyg09O/raw'),true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "FE Animation",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/tcTds0ky"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "FE Ak-47",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/AK-47"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Ban Hammer",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Ban%20Hammer"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Fling All",
+	Callback = function()
+      		loadstring(game:HttpGet('https://pastebin.com/raw/Kbc2cP4m'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Neptunian",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Vereus",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Client-Replication-Xester-5452"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
 	Name = "Blox Fruit",
 	Icon = "rbxassetid://16151098113",
 	PremiumOnly = false
@@ -419,5 +474,19 @@ Tab:AddButton({
 	Name = "Project Meow",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Legends-Of-Speed-Speeeeed-Farm-Open-Source-old-code-lel-1785"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "King Legacy",
+	Icon = "rbxassetid://16294157218",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Hyper Hub",
+	Callback = function()
+      		repeat wait() until game:IsLoaded()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/main/script.lua"))()
   	end    
 })
