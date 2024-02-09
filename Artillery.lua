@@ -127,9 +127,23 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Vereus",
+	Name = "Chat Troll",
 	Callback = function()
-      		loadstring(game:HttpGet("https://scriptblox.com/raw/Client-Replication-Xester-5452"))()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/game-hax/uca/main/release/uca.min.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "FE Monster",
+	Callback = function()
+      		loadstring(game:HttpGet('https://pastebin.com/raw/wC64LrAJ',true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "FE Invisible",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui'))()
   	end    
 })
 
@@ -488,5 +502,68 @@ Tab:AddButton({
 	Callback = function()
       		repeat wait() until game:IsLoaded()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/main/script.lua"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Arsenal",
+	Icon = "rbxassetid://16296600403",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Nova Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/B6fhpKJg"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Tbao Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Tect Menu",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Infinity2346/Tect-Menu/main/Arsenalscript.txt"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Virtual",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/DomainXV3/DomainX/main/virtual.cc",true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Project Slayer",
+	Icon = "rbxassetid://16296597217",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "SylveonHub",
+	Callback = function()
+      		local LoaderUrl = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/Mobile.lua"
+repeat wait() until game:IsLoaded()
+loadstring(game:HttpGet(LoaderUrl))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Oni Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Phyoue/psonis/main/OniHubMobile", true))();
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Skeered Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Skeereddo/name/main/krnl"))()
   	end    
 })
