@@ -455,3 +455,131 @@ btns:Button(
 )
 
 btns:Seperator()
+
+local btns = serv:Channel("Demon Piece")
+
+btns:Button(
+    "Nexus Hub",
+    function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/CrazyHub123/NexusHubMain/main/Main.lua", true))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "OMG Hub",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))() 
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "NSHUBV2",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HenSeu87PofghYT/ALL-IN-ONE/main/NSHUBV2"))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "DemonicHub_V2",
+    function()
+    getgenv().ValidateType = "Key" -- You can use "Whitelist" too! + pls don't remove nothing from this script or it can have errors.
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Prosexy/Demonic-HUB-V2/main/DemonicHub_V2.lua", true))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "Mewing Hub",
+    function()
+    
+    end
+)
+
+btns:Seperator()
+
+local btns = serv:Channel("Project Mugetsu")
+
+btns:Button(
+    "Skeered Hub",
+    function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Skeereddo/name/main/krnl', true))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "Reaper Hub",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+    end
+)
+
+btns:Seperator()
+
+local btns = serv:Channel("King Legacy")
+
+btns:Button(
+    "HULK Hub",
+    function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/HULKUexe/mobileX/main/FreeScript.lua")()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "Hyper Hub",
+    function()
+    repeat wait() until game:IsLoaded()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/main/script.lua"))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "Zen Hub",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Zenhubtop/zen_hub_pr/main/zennewwwwui.lua", true))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "BT Hub",
+    function()
+    loadstring(game:HttpGetAsync("https://lua-library.btteam.net/script-auth.txt"))()
+    end
+)
+
+btns:Seperator()
+
+local btns = serv:Channel("Jail Break")
+
+btns:Button(
+    "Universal Hub",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular"))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "Project Auto",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release"))()
+    end
+)
+
+btns:Seperator()
