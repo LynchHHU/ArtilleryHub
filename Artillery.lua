@@ -5,6 +5,17 @@ local win = DiscordLib:Window("Artillery Hub | Made by LynchYT")
 
 local serv = win:Server("Main", "")
 
+local btns = serv:Channel("Other Hub")
+
+btns:Button(
+    "Reaper Hub (Support 22Games)",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+    end
+)
+
+btns:Seperator()
+
 local btns = serv:Channel("Player Tools")
 
 btns:Button(
