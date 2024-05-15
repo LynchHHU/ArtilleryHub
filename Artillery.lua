@@ -594,3 +594,82 @@ btns:Button(
 )
 
 btns:Seperator()
+
+local btns= serv:Channel("Anime Fighter")
+
+btns:Button(
+    "Zer0 Hub",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/MainScript.lua"))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "Reaper Hub",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "Alchemy",
+    function()
+    repeat wait() until game:IsLoaded()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Binintrozza/yutv2e/main/afss"))()
+    end
+)
+
+btns:Seperator()
+
+local btns = serv:Channel("Aura Craft")
+
+btns:Button(
+    "Auto Craft",
+    function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/ebtbRCbA"))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "Reaper Hub",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "Tora Script",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraScript/Script/main/AuraCraft", true))()
+    end
+)
+
+btns:Seperator()
+
+local btns = serv:Channel("Anime Dimension")
+
+btns:Button(
+    "Silver Hub",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhau207/SilverHub/main/Protected_9892584729983615.lua"))()
+    end
+)
+
+btns:Seperator()
+
+btns:Button(
+    "CanislupusX Hub",
+    function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/CanisLupusXL/CanislupusXHub/main/Anime_Dimension_Simulator'))()
+    end
+)
+
+btns:Seperator()
