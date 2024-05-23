@@ -5,6 +5,7 @@ local win = DiscordLib:Window("Artillery Hub | Made by LynchYT")
 
 local serv = win:Server("Main", "")
 
+---Other Hub
 local btns = serv:Channel("Other Hub")
 
 btns:Button(
@@ -16,6 +17,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Player Tools
 local btns = serv:Channel("Player Tools")
 
 btns:Button(
@@ -90,6 +92,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Blox Fruit
 local btns = serv:Channel("Blox Fruit Scripts")
 
 btns:Button(
@@ -185,6 +188,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Demonfall
 local btns = serv:Channel("Demon Fall")
 
 btns:Button(
@@ -214,6 +218,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Lt2
 local btns = serv:Channel("Lumber Tycoon 2")
 
 btns:Button(
@@ -261,6 +266,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Beeswarm
 local btns = serv:Channel("Bee Swarm")
 
 btns:Button(
@@ -317,6 +323,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Muscle Legend
 local btns = serv:Channel("Muscle Legends")
 
 btns:Button(
@@ -364,6 +371,8 @@ btns:Button(
 
 btns:Seperator()
 
+
+---Ninja Legend
 local btns = serv:Channel("Ninja Legends")
 
 btns:Button(
@@ -420,6 +429,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Legend of speed
 local btns = serv:Channel("Legend Of Speed")
 
 btns:Button(
@@ -467,6 +477,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Demonpiece
 local btns = serv:Channel("Demon Piece")
 
 btns:Button(
@@ -515,6 +526,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Project Mugetsu
 local btns = serv:Channel("Project Mugetsu")
 
 btns:Button(
@@ -535,6 +547,7 @@ btns:Button(
 
 btns:Seperator()
 
+---KingLegacy
 local btns = serv:Channel("King Legacy")
 
 btns:Button(
@@ -575,6 +588,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Jailbreak
 local btns = serv:Channel("Jail Break")
 
 btns:Button(
@@ -595,6 +609,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Anime Fighters
 local btns= serv:Channel("Anime Fighter")
 
 btns:Button(
@@ -625,6 +640,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Binintrozza/yutv2e/ma
 
 btns:Seperator()
 
+---Aura Craft
 local btns = serv:Channel("Aura Craft")
 
 btns:Button(
@@ -654,6 +670,7 @@ btns:Button(
 
 btns:Seperator()
 
+---Anime Dimensions
 local btns = serv:Channel("Anime Dimension")
 
 btns:Button(
