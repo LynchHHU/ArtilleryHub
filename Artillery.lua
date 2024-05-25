@@ -1,692 +1,404 @@
-local DiscordLib =
-    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
+-- Loadstrings --
+
+
+
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- UI --
+
+local Window = Fluent:CreateWindow({
+    Title = "Artillery Hub",
+    SubTitle = "Made By LynchYT",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(543, 300),
+    Acrylic = false,                        -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "dark",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+})
+
+local Tabs = {
+--------A
+    UniversalScripts = Window:AddTab({ Title = "| Universal Scripts", Icon = "" }),
+    Arsenal = Window:AddTab({ Title = "| Arsenal Scripts", Icon = "" }),
+    Auracraft = Window:AddTab({ Title = "| Aura Craft Scripts", Icon = "" }),
+    Animedim = Window:AddTab({ Title = "| Anime Dimension Script", Icon = "" }),
+    Animefigters = Window:AddTab({ Title = "| Anime Figher Script", Icon = "" }),
+--------B
+    Bloxfruitss = Window:AddTab({ Title = "| Blox Fruit Scripts", Icon = "" }),
+    Beeswarm = Window:AddTab({ Title = "| Bee Swarm Scripts", Icon = "" }),
+--------C
+
+--------D
+    Demonfall = Window:AddTab({ Title = "| Demonfall Scripts", Icon = "" }),
+--------E
+--------F
+--------G
+--------H
+--------I
+--------J
+--------K
+--------L
+--------M
+--------N
+--------O
+--------P
+--------Q
+--------R
+--------S
+--------T
+--------U
+--------V
+--------W
+--------X
+--------Y
+--------Z
+}
 
-local win = DiscordLib:Window("Artillery Hub | Made by LynchYT")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Universal Script
 
-local serv = win:Server("Main", "")
-
----Other Hub
-local btns = serv:Channel("Other Hub")
-
-btns:Button(
-    "Reaper Hub (Support 22Games)",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
-    end
-)
-
-btns:Seperator()
-
----Player Tools
-local btns = serv:Channel("Player Tools")
-
-btns:Button(
-    "Keyboard Gen",
-    function()
-    loadstring(game:HttpGet("https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%2520From%2520Ohio%2520Fr%2520Fr"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Keyboard",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GGH52lan/GGH52lan/main/keyboard.txt"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Fly Script",
-    function()
-    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Mobile-fly-script-(Arceus-x)-2042"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "SimpleSpy",
-    function()
-    loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "HitboxExpander",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "DarkDexV3",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Infinite Yield",
-    function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Hydroxide",
-    function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/36kVYSdR"))()
-    end
-)
-
-btns:Seperator()
-
----Blox Fruit
-local btns = serv:Channel("Blox Fruit Scripts")
-
-btns:Button(
-    "Alchemy Hub PVP Kit",
-    function()
-    _G.Aimbot = true
-loadstring(game:HttpGet("https://luable.top/acm"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "RINX Hub",
-    function()
-    _G.Language = "English"
-loadstring(game:HttpGetAsync"https://github.com/RinXHub/RinX/raw/main/new.lua")()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "MinGaming Hub",
-    function()
-    _G.LoadUiFast = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CheemsNhuChiAl/MinGamingHub/main/mingamingupdatenew"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Quartzy Hub",
-    function()
-    loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Redz Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Tsuo Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tsuo7/TsuoHub/main/Tsuoscripts"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Atreus Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Atreus-Hub/Atreus-Hub-V1/main/Blox%20Fruits.lua"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Lunar X Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/NguyenLam2504/LunarXHubNextGeneration/main/GameShit.lua"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "ZIN Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiSupremacy/Loader.xyz/main/ZINHUBLOADER.lua"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Reaper Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
-    end
-)
-
-btns:Seperator()
-
----Demonfall
-local btns = serv:Channel("Demon Fall")
-
-btns:Button(
-    "NOOBHUBX",
-    function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/NOOBHUBX/DemonFall/main/NOOB%20HUB.Lua'),true))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Lazy Hub",
-    function()
-    loadstring(game:HttpGet("https://github.com/LioK251/Scripts/raw/main/lazyhub.lua"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Leanfall",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/KeoneGithub/KeoneGithub/main/DemonCockCandy",true))()
-    end
-)
-
-btns:Seperator()
-
----Lt2
-local btns = serv:Channel("Lumber Tycoon 2")
-
-btns:Button(
-    "Dark X",
-    function()
-    loadstring(game:HttpGet"https://raw.githubusercontent.com/darkxwin/darkxsourcethinkyoutousedarkx/main/darkx")()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "LuaWareLoader",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Toads",
-    function()
-    loadstring(game:HttpGet("https://bit.ly/3x90l99"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "StepShopMobile",
-    function()
-    loadstring(Game:HttpGet("https://bit.ly/StepShopMobile"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Butter Hub",
-    function()
-    loadstring(game:HttpGet("https://scriptblox.com/raw/Lumber-Tycoon-2-ButterHub-8098"))()
-    end
-)
-
-btns:Seperator()
-
----Beeswarm
-local btns = serv:Channel("Bee Swarm")
-
-btns:Button(
-    "Macro V3",
-    function()
-    loadstring(game:HttpGet("https://www.macrov2-script.xyz/macrov3.lua"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Unnamed Auto Farm",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Kometa",
-    function()
-    loadstring(game:HttpGet('https://s.kometa.ga/kometa.lua'))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Adel",
-    function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub/main/Main.lua'))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Histy",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Histy"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Astronomic",
-    function()
-    loadstring(game:HttpGet("https://astronomic.vercel.app"))()
-    end
-)
-
-btns:Seperator()
-
----Muscle Legend
-local btns = serv:Channel("Muscle Legends")
-
-btns:Button(
-    "Speed Hub",
-    function()
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Mad Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/maddjester/MaddHub/main/GetKey.lua"))() 
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Autofarm",
-    function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/jynzl/main/main/Musclas%20Legenos.lua'))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Rolly Hub",
-    function()
-    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Rolly-Hub-I-6-GAMES-SUPPORTED-4511", true))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Unnamed GUI",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
-    end
-)
-
-btns:Seperator()
-
-
----Ninja Legend
-local btns = serv:Channel("Ninja Legends")
-
-btns:Button(
-    "PWNER HUB",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/PWNERHUB.lua"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Bt Project",
-    function()
-    loadstring(game:HttpGet('https://btteam.net/scripts-auth/', true))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Pure Hub",
-    function()
-    loadstring(game:HttpGet("https://purehub.xyz/Loader", true))()
+Tabs.UniversalScripts:AddButton({
+    Title = "Keyboard Gen",
+    Callback = function()
+        loadstring(game:HttpGet("https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%2520From%2520Ohio%2520Fr%2520Fr"))()
     end
-)
+})
 
-btns:Seperator()
-
-btns:Button(
-    "Proxima Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Horizon.cc",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadetamic/horizon/main/loadstring.lua"))()
+Tabs.UniversalScripts:AddButton({
+    Title = "Fly",
+    Callback = function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Mobile-fly-script-(Arceus-x)-2042"))()
     end
-)
-
-btns:Seperator()
+})
 
-btns:Button(
-    "Speed Hub",
-    function()
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+Tabs.UniversalScripts:AddButton({
+    Title = "Hydroxide",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/36kVYSdR"))()
     end
-)
+})
 
-btns:Seperator()
-
----Legend of speed
-local btns = serv:Channel("Legend Of Speed")
-
-btns:Button(
-    "Tbao Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHublegendsofspeed"))()
+Tabs.UniversalScripts:AddButton({
+    Title = "Simple Spy",
+    Callback = function()
+        loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
     end
-)
+})
 
-btns:Seperator()
-
-btns:Button(
-    "Project Meow",
-    function()
-    loadstring(game:HttpGet("https://scriptblox.com/raw/Legends-Of-Speed-Speeeeed-Farm-Open-Source-old-code-lel-1785"))()
+Tabs.UniversalScripts:AddButton({
+    Title = "Dark Dex V3",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
     end
-)
+})
 
-btns:Seperator()
-
-btns:Button(
-    "Legend Hub",
-    function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/mqGPg69N"))()
+Tabs.UniversalScripts:AddButton({
+    Title = "Infinite Yield",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end
-)
-
-btns:Seperator()
+})
 
-btns:Button(
-    "Auto Farm",
-    function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/1iMHrZ50", true))()
+Tabs.UniversalScripts:AddButton({
+    Title = "Hitbox Expander",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
     end
-)
+})
 
-btns:Seperator()
-
-btns:Button(
-    "Speed Hub",
-    function()
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+Tabs.UniversalScripts:AddButton({
+    Title = "On Screen Keyboard",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GGH52lan/GGH52lan/main/keyboard.txt"))()
     end
-)
-
-btns:Seperator()
+})
 
----Demonpiece
-local btns = serv:Channel("Demon Piece")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Arsenal
 
-btns:Button(
-    "Nexus Hub",
-    function()
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/CrazyHub123/NexusHubMain/main/Main.lua", true))()
-    end
-)
 
-btns:Seperator()
+-- VIP Script Hubs --
 
-btns:Button(
-    "OMG Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))() 
+Tabs.Arsenal:AddButton({
+    Title = "Reaper Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
     end
-)
+})
 
-btns:Seperator()
-
-btns:Button(
-    "NSHUBV2",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HenSeu87PofghYT/ALL-IN-ONE/main/NSHUBV2"))()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "DemonicHub_V2",
-    function()
-    getgenv().ValidateType = "Key" -- You can use "Whitelist" too! + pls don't remove nothing from this script or it can have errors.
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Prosexy/Demonic-HUB-V2/main/DemonicHub_V2.lua", true))()
+Tabs.Arsenal:AddButton({
+    Title = "Nexware",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DatMxkey/Nexware/main/loader.lua"))()
     end
-)
+})
 
-btns:Seperator()
-
-btns:Button(
-    "Mewing Hub",
-    function()
-    
+Tabs.Arsenal:AddButton({
+    Title = "Ura Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/yoboyghxst/Uraset/main/Uraset.lua"))()
     end
-)
-
-btns:Seperator()
+})
 
----Project Mugetsu
-local btns = serv:Channel("Project Mugetsu")
-
-btns:Button(
-    "Skeered Hub",
-    function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Skeereddo/name/main/krnl', true))()
+Tabs.Arsenal:AddButton({
+    Title = "Elijah Hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ElijahGamingRBLX/Elijah-Hub-Arsenal/main/ElijahHubArsenal.lua'))()
     end
-)
+})
 
-btns:Seperator()
-
-btns:Button(
-    "Reaper Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+Tabs.Arsenal:AddButton({
+    Title = "RSO",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RSOscrip/Arsenal/main/RSOscrip"))()
     end
-)
-
-btns:Seperator()
+})
 
----KingLegacy
-local btns = serv:Channel("King Legacy")
-
-btns:Button(
-    "HULK Hub",
-    function()
-    loadstring(game:HttpGet"https://raw.githubusercontent.com/HULKUexe/mobileX/main/FreeScript.lua")()
+Tabs.Arsenal:AddButton({
+    Title = "Tbao Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))()
     end
-)
-
-btns:Seperator()
+})
 
-btns:Button(
-    "Hyper Hub",
-    function()
-    repeat wait() until game:IsLoaded()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/main/script.lua"))()
+Tabs.Arsenal:AddButton({
+    Title = "Thunder",
+    Callback = function()
+        if getgenv().thunderclient then return end
+getgenv().thunderclient = true
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/dca3e69649ed196af0ac6577f743a0ae.lua"))()
     end
-)
+})
 
-btns:Seperator()
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Aura Craft
 
-btns:Button(
-    "Zen Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Zenhubtop/zen_hub_pr/main/zennewwwwui.lua", true))()
+Tabs.Auracraft:AddButton({
+    Title = "Reaper Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
     end
-)
+})
 
-btns:Seperator()
-
-btns:Button(
-    "BT Hub",
-    function()
-    loadstring(game:HttpGetAsync("https://lua-library.btteam.net/script-auth.txt"))()
+Tabs.Auracraft:AddButton({
+    Title = "Tora Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraScript/Script/main/AuraCraft", true))()
     end
-)
-
-btns:Seperator()
+})
 
----Jailbreak
-local btns = serv:Channel("Jail Break")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Anime Dimension
 
-btns:Button(
-    "Universal Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular"))()
+Tabs.Animedim:AddButton({
+    Title = "Silver Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhau207/SilverHub/main/Protected_9892584729983615.lua"))()
     end
-)
+})
 
-btns:Seperator()
-
-btns:Button(
-    "Project Auto",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release"))()
+Tabs.Animedim:AddButton({
+    Title = "CanisLupusX Hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/CanisLupusXL/CanislupusXHub/main/Anime_Dimension_Simulator'))()
     end
-)
-
-btns:Seperator()
+})
 
----Anime Fighters
-local btns= serv:Channel("Anime Fighter")
 
-btns:Button(
-    "Zer0 Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/MainScript.lua"))()
-    end
-)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Anime Fighters
 
-btns:Seperator()
-
-btns:Button(
-    "Reaper Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+Tabs.Animefigters:AddButton({
+    Title = "Reaper Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
     end
-)
-
-btns:Seperator()
+})
 
-btns:Button(
-    "Alchemy",
-    function()
-    repeat wait() until game:IsLoaded()
+Tabs.Animefigters:AddButton({
+    Title = "Yut V2",
+    Callback = function()
+        repeat wait() until game:IsLoaded()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Binintrozza/yutv2e/main/afss"))()
     end
-)
+})
 
-btns:Seperator()
-
----Aura Craft
-local btns = serv:Channel("Aura Craft")
-
-btns:Button(
-    "Auto Craft",
-    function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/ebtbRCbA"))()
+Tabs.Animefigters:AddButton({
+    Title = "Zer0 Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/MainScript.lua"))()
     end
-)
+})
 
-btns:Seperator()
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------BloxFruit
 
-btns:Button(
-    "Reaper Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+Tabs.Bloxfruitss:AddButton({
+    Title = "Reaper Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
     end
-)
+})
 
-btns:Seperator()
-
-btns:Button(
-    "Tora Script",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraScript/Script/main/AuraCraft", true))()
+Tabs.Bloxfruitss:AddButton({
+    Title = "Alchemy Hub PVP",
+    Callback = function()
+        _G.Aimbot = true
+loadstring(game:HttpGet("https://luable.top/acm"))()
     end
-)
+})
 
-btns:Seperator()
-
----Anime Dimensions
-local btns = serv:Channel("Anime Dimension")
-
-btns:Button(
-    "Silver Hub",
-    function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhau207/SilverHub/main/Protected_9892584729983615.lua"))()
+Tabs.Bloxfruitss:AddButton({
+    Title = "RinX Hub",
+    Callback = function()
+        _G.Language = "English"
+loadstring(game:HttpGetAsync"https://github.com/RinXHub/RinX/raw/main/new.lua")()
     end
-)
+})
 
-btns:Seperator()
-
-btns:Button(
-    "CanislupusX Hub",
-    function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/CanisLupusXL/CanislupusXHub/main/Anime_Dimension_Simulator'))()
+Tabs.Bloxfruitss:AddButton({
+    Title = "MinGaming Hub",
+    Callback = function()
+        _G.LoadUiFast = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CheemsNhuChiAl/MinGamingHub/main/mingamingupdatenew"))()
     end
-)
+})
 
-btns:Seperator()
+Tabs.Bloxfruitss:AddButton({
+    Title = "Quartyx",
+    Callback = function()
+        loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+    end
+})
+
+Tabs.Bloxfruitss:AddButton({
+    Title = "RedZ Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+    end
+})
+
+Tabs.Bloxfruitss:AddButton({
+    Title = "Tsuo Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Tsuo7/TsuoHub/main/Tsuoscripts"))()
+    end
+})
+
+Tabs.Bloxfruitss:AddButton({
+    Title = "Atreus Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Atreus-Hub/Atreus-Hub-V1/main/Blox%20Fruits.lua"))()
+    end
+})
+
+Tabs.Bloxfruitss:AddButton({
+    Title = "LunarX Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NguyenLam2504/LunarXHubNextGeneration/main/GameShit.lua"))()
+    end
+})
+
+Tabs.Bloxfruitss:AddButton({
+    Title = "Zin Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiSupremacy/Loader.xyz/main/ZINHUBLOADER.lua"))()
+    end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Bee Swarm
+
+Tabs.Beeswarm:AddButton({
+    Title = "Macro V3",
+    Callback = function()
+        loadstring(game:HttpGet("https://www.macrov2-script.xyz/macrov3.lua"))()
+    end
+})
+
+Tabs.Beeswarm:AddButton({
+    Title = "Unnamed GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
+    end
+})
+
+Tabs.Beeswarm:AddButton({
+    Title = "Kometa",
+    Callback = function()
+        loadstring(game:HttpGet('https://s.kometa.ga/kometa.lua'))()
+    end
+})
+
+Tabs.Beeswarm:AddButton({
+    Title = "Adel Hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub/main/Main.lua'))()
+    end
+})
+
+Tabs.Beeswarm:AddButton({
+    Title = "Histy Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Histy"))()
+    end
+})
+
+Tabs.Beeswarm:AddButton({
+    Title = "Astronomic Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://astronomic.vercel.app"))()
+    end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Demonfall
+
+Tabs.Demonfall:AddButton({
+    Title = "Noob Hub",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/NOOBHUBX/DemonFall/main/NOOB%20HUB.Lua'),true))()
+    end
+})
+
+Tabs.Demonfall:AddButton({
+    Title = "Lazy Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://github.com/LioK251/Scripts/raw/main/lazyhub.lua"))()
+    end
+})
+
+Tabs.Demonfall:AddButton({
+    Title = "Leanfall",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KeoneGithub/KeoneGithub/main/DemonCockCandy",true))()
+    end
+})
+
+
+-- Addons:
+-- SaveManager (Allows you to have a configuration system)
+-- InterfaceManager (Allows you to have a interface managment system)
+
+-- Hand the library over to our managers
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+
+-- Ignore keys that are used by ThemeManager.
+-- (we dont want configs to save themes, do we?)
+SaveManager:IgnoreThemeSettings()
+
+-- You can add indexes of elements the save manager should ignore
+SaveManager:SetIgnoreIndexes({})
+
+-- use case for doing it this way:
+-- a script hub could have themes in a global folder
+-- and game configs in a separate folder per game
+InterfaceManager:SetFolder("FluentScriptHub")
+SaveManager:SetFolder("FluentScriptHub/specific-game")
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+
+
+Window:SelectTab(1)
+SaveManager:LoadAutoloadConfig(
+)
