@@ -28,7 +28,8 @@ local Tabs = {
     Arsenal = Window:AddTab({ Title = "| Arsenal Scripts", Icon = "" }),
     Auracraft = Window:AddTab({ Title = "| Aura Craft Scripts", Icon = "" }),
     Animedim = Window:AddTab({ Title = "| Anime Dimension Script", Icon = "" }),
-    Animefigters = Window:AddTab({ Title = "| Anime Figher Script", Icon = "" }),
+    Animefigters = Window:AddTab({ Title = "| Anime Fighters Script", Icon = "" }),
+    AnimeLST = Window:AddTab({ Title = "| Anime Last Stand Scripts", Icon = "" }),
 --------B
     Bloxfruitss = Window:AddTab({ Title = "| Blox Fruit Scripts", Icon = "" }),
     Beeswarm = Window:AddTab({ Title = "| Bee Swarm Scripts", Icon = "" }),
@@ -36,15 +37,19 @@ local Tabs = {
 
 --------D
     Demonfall = Window:AddTab({ Title = "| Demonfall Scripts", Icon = "" }),
+    Demonpiece = Window:AddTab({ Title = "| Demon Piece Scripts", Icon = "" }),
 --------E
 --------F
 --------G
 --------H
 --------I
 --------J
+Jailbreak = Window:AddTab({ Title = "| Jailbreak Scripts", Icon = "" }),
 --------K
 --------L
+lumbertycoon = Window:AddTab({ Title = "| Lumber Tycoon 2 Scripts", Icon = "" }),
 --------M
+muscleL = Window:AddTab({ Title = "| Muscle Legends Scripts", Icon = "" }),
 --------N
 --------O
 --------P
@@ -231,6 +236,23 @@ Tabs.Animefigters:AddButton({
     end
 })
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Anime Last Stand
+
+Tabs.AnimeLST:AddButton({
+    Title = "Buang Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/buang5516/buanghub/main/BUANGHUB.lua"))()
+    end
+})
+
+Tabs.AnimeLST:AddButton({
+    Title = "Demonic Hub",
+    Callback = function()
+        getgenv().ValidateType = "Key" -- You can use "Whitelist" too! + pls don't remove nothing from this script or it can have errors.
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Prosexy/Demonic-HUB-V2/main/DemonicHub_V2.lua", true))()
+    end
+})
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------BloxFruit
 
 Tabs.Bloxfruitss:AddButton({
@@ -370,6 +392,127 @@ Tabs.Demonfall:AddButton({
     Title = "Leanfall",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/KeoneGithub/KeoneGithub/main/DemonCockCandy",true))()
+    end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Demon Piece
+
+Tabs.Demonpiece:AddButton({
+    Title = "Demonic Hub",
+    Callback = function()
+        getgenv().ValidateType = "Key" -- You can use "Whitelist" too! + pls don't remove nothing from this script or it can have errors.
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Prosexy/Demonic-HUB-V2/main/DemonicHub_V2.lua", true))()
+    end
+})
+
+Tabs.Demonpiece:AddButton({
+    Title = "NS Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HenSeu87PofghYT/ALL-IN-ONE/main/NSHUBV2"))()
+    end
+})
+
+Tabs.Demonpiece:AddButton({
+    Title = "OMG Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))() 
+    end
+})
+
+Tabs.Demonpiece:AddButton({
+    Title = "Nexus Hub",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/CrazyHub123/NexusHubMain/main/Main.lua", true))()
+    end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Jailbreak
+
+Tabs.Demonpiece:AddButton({
+    Title = "Project Auto",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release"))()
+    end
+})
+
+Tabs.Demonpiece:AddButton({
+    Title = "Universal Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular"))()
+    end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Lt2
+
+Tabs.lumbertycoon:AddButton({
+    Title = "Butter Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/Lumber-Tycoon-2-ButterHub-8098"))()
+    end
+})
+
+Tabs.lumbertycoon:AddButton({
+    Title = "Dark X",
+    Callback = function()
+        loadstring(game:HttpGet"https://raw.githubusercontent.com/darkxwin/darkxsourcethinkyoutousedarkx/main/darkx")()
+    end
+})
+
+Tabs.lumbertycoon:AddButton({
+    Title = "Lua Ware",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))()
+    end
+})
+
+Tabs.lumbertycoon:AddButton({
+    Title = "Step Shop Mobile",
+    Callback = function()
+        loadstring(Game:HttpGet("https://bit.ly/StepShopMobile"))()
+    end
+})
+
+Tabs.lumbertycoon:AddButton({
+    Title = "Toads",
+    Callback = function()
+        loadstring(game:HttpGet("https://bit.ly/3x90l99"))()
+    end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Muscle Legends
+
+Tabs.muscleL:AddButton({
+    Title = "Mad Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/maddjester/MaddHub/main/GetKey.lua"))() 
+    end
+})
+
+Tabs.muscleL:AddButton({
+    Title = "Speed Hub",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+    end
+})
+
+Tabs.muscleL:AddButton({
+    Title = "Rolly Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Rolly-Hub-I-6-GAMES-SUPPORTED-4511", true))()
+    end
+})
+
+Tabs.muscleL:AddButton({
+    Title = "Auto Farm",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/jynzl/main/main/Musclas%20Legenos.lua'))()
+    end
+})
+
+Tabs.muscleL:AddButton({
+    Title = "Unnamed GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
     end
 })
 
