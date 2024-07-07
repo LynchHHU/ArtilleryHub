@@ -1,0 +1,224 @@
+repeat wait() until game:IsLoaded()
+
+if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("LoadingScreen") then
+    if game:GetService("Players").LocalPlayer.PlayerGui.LoadingScreen.Background.Loading:FindFirstChild("Skip") then
+
+firesignal(game:GetService("Players").LocalPlayer.PlayerGui.FindFirstChild("LoadingScreen").Background.Loading.Skip.MouseButton1Click)
+    end
+end
+
+-- [Library] --
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+-- [Window] --
+
+local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+-- [Pre Script] --
+
+game:GetService("UserInputService").MouseIconEnabled = true -- Shows your mouse cursor
+game:GetService("UserInputService").MouseBehavior = Enum.MouseBehavior.Default
+
+for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+    v:Disable()
+end
+
+-- [Vars] --
+
+local plr = game:GetService("Players").LocalPlayer
+local TweenService = game:GetService("TweenService")
+local Workspace = game:GetService("Workspace")
+local noclipE = false
+local antifall = nil
+local Settings = {}
+
+local function noclip()
+    for i, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+        if v:IsA("BasePart") and v.CanCollide == true then
+            v.CanCollide = false
+        end
+    end
+end
+
+local function moveto(obj, speed)
+    local info = TweenInfo.new(((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - obj.Position).Magnitude) / speed, Enum.EasingStyle.Linear)
+    local tween = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, info, {CFrame = obj})
+    
+    if not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyVelocity") then
+        antifall = Instance.new("BodyVelocity", game.Players.LocalPlayer.Character.HumanoidRootPart)
+        antifall.Velocity = Vector3.new(0,0,0)
+        noclipE = game:GetService("RunService").Stepped:Connect(noclip)
+        tween:Play()
+    end
+
+    tween.Completed:Connect(function()
+        antifall:Destroy()
+        noclipE:Disconnect()
+    end)
+end
+
+-- [Auto Farming] --
+
+local Autofarming = Window:MakeTab({
+	Name = "Farming",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Autofarming:AddLabel("NORMAL MOBS")
+
+local mob_list = {
+  "Green Demon",
+  "Generic Oni",
+  "Generic Slayer",
+  "Frosty Oni",
+  "Blue Demon",
+  "Slayer Boss",
+  "Zenitsu"
+}
+
+Tab:AddDropdown({
+	Name = "Select Mobs",
+	Default = "1",
+	Options = mob_list,
+	Callback = function(v)
+		Settings["ChosenMob"] = v
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Tween Mobs",
+	Default = false,
+	Callback = function(v)
+		Settings["autofarm_mobs"] = v
+	end    
+})
+
+Autofarming:AddLabel("BOSSES")
+
+local boss_list = {
+  "Kaigaku",
+  "Gyutaro",
+  "Okuro",
+  "Rui",
+  "Lower Moon 2",
+  "Lower Moon 3",
+  "Akaza",
+  "Doma",
+  "Kokushibo",
+}
+
+Tab:AddDropdown({
+	Name = "Select Boss",
+	Default = "1",
+	Options = boss_list,
+	Callback = function(v)
+		Settings["ChosenBosses"] = v
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Tween Boss",
+	Default = false,
+	Callback = function(v)
+		Settings["autofarm_bosses"] = v
+	end    
+})
+
+Tab:AddSlider({
+	Name = "Tween Speed",
+	Min = 0,
+	Max = 75,
+	Default = 75,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	Callback = function(v)
+		Settings["TpSpeed"] = v
+	end    
+})
+
+-- [Auto Farm Function] --
+
+local function getMob()
+    local dist, mob = math.huge
+    for i, v in pairs(Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == Settings.ChosenMobs then
+            local get_mag = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v:GetModelCFrame().p).magnitude
+            if get_mag < dist then
+                dist = get_mag
+                mob = v
+            end
+        end
+    end
+    return mob
+end
+
+local function getBosses()
+    local dist, mob = math.huge
+    for i, v in pairs(Workspace:GetChildren()) do
+        if v:IsA("Model") and v.Name == Settings.ChosenBoss then
+            local get_mag = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v:GetModelCFrame().p).magnitude
+            if get_mag < dist then
+                dist = get_mag
+                mob = v
+            end
+        end
+    end
+    return mob
+end
+
+spawn (function()
+  while wait() do
+     if Settings.autofarm_mobs then
+            pcall(function()
+                local enemy_mag = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - getMob():GetModelCFrame().p).magnitude
+
+                if not getMob():FindFirstChild("Executed") then
+                    moveto(getMob():GetModelCFrame() * CFrame.new(0,0,3), tonumber(Settings.TpSpeed or 75))
+                end
+
+                if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Model"):FindFirstChild("Blade") then
+                    if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Model"):FindFirstChild("Equipped").Part0 == nil then
+                        game:GetService("VirtualInputManager"):SendKeyEvent(true, "R", false, game)
+                    end
+                end
+
+                if getMob():FindFirstChild("Executed") then
+                    wait(1)
+                    getMob():Destroy()
+                end
+
+                if getMob():FindFirstChild("Down") then
+                    moveto(getMob():GetModelCFrame() * CFrame.new(0,0,3), tonumber(Settings.TpSpeed or 75))
+                    game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer("Character", "Execute")
+                end
+
+                for Index, Value in next, plr.Character:GetChildren() do
+                    if Value.Name == "Stun"
+                        or Value.Name == "Attacking"
+                        or Value.Name == "AttackAnnounce"
+                        or Value.Name == "Busy"
+                        or Value.Name == "SequenceCooldown"
+                        or Value.Name == "SequenceFactor"
+                        or Value.Name == "HeavyCooldown"
+                        or Value.Name == "Sequence"
+                        or Value.Name == "SequenceFactor"
+                    then
+                        Value:Destroy()
+                    end
+                end
+
+                if enemy_mag <= 10 then
+                    if getMob():FindFirstChild("Block") then
+                        game:GetService("ReplicatedStorage").Remotes.Async:FireServer("Katana", "Heavy")
+                    else
+                        game:GetService("ReplicatedStorage").Remotes.Async:FireServer("Katana", "Server")
+                    end
+                    
+                end
+                  
+            end)
+        end       
+    end    
+end)
