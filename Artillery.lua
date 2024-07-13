@@ -1,25 +1,17 @@
--- Loadstrings --
-
-
-
+-- // Loader \\ --
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
--- UI --
-
+-- // Window \\ --
 local Window = Fluent:CreateWindow({
     Title = "Artillery Hub",
-    SubTitle = "Made By LynchYT",
+    SubTitle = "by LynchYT",
     TabWidth = 160,
-    Size = UDim2.fromOffset(543, 300),
-    Acrylic = false,                        -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "dark",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+    Size = UDim2.fromOffset(450, 300),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.End -- Used when theres no MinimizeKeybind
 })
 
 local Tabs = {
@@ -131,7 +123,42 @@ Tabs.UniversalScripts:AddButton({
 Tabs.Arsenal:AddButton({
     Title = "Reaper Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+        loadstring((http.request{Url="https://reaperscripts.com/loader?l=1"}).Body,"0zek8y2bld7.qowl6c7o~1")()
+    end
+})
+
+Tabs.Arsenal:AddButton({
+    Title = "AdvanceTech",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AdvanceFTeam/Our-Scripts/main/AdvanceTech/Arsenal_V1.6.lua"))()
+    end
+})
+
+Tabs.Arsenal:AddButton({
+    Title = "Thunder Client",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/andrewdarkyyofficial/thunderclient/main/main.lua"))()
+    end
+})
+
+Tabs.Arsenal:AddButton({
+    Title = "Tbao Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/ArsenalTbaoHubNew"))()
+    end
+})
+
+Tabs.Arsenal:AddButton({
+    Title = "QP Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/QPScript/Script/main/Arsenal.txt"))()
+    end
+})
+
+Tabs.Arsenal:AddButton({
+    Title = "MidnightCC",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/laeraz/midnightcc/main/public.lua"))()
     end
 })
 
@@ -163,21 +190,7 @@ Tabs.Arsenal:AddButton({
     end
 })
 
-Tabs.Arsenal:AddButton({
-    Title = "Tbao Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))()
-    end
-})
 
-Tabs.Arsenal:AddButton({
-    Title = "Thunder",
-    Callback = function()
-        if getgenv().thunderclient then return end
-getgenv().thunderclient = true
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/dca3e69649ed196af0ac6577f743a0ae.lua"))()
-    end
-})
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Aura Craft
 
