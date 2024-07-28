@@ -89,6 +89,20 @@ Tabs.Information:AddButton({
 
 -- // Player \\ --
 
+local Slider = Tabs.PlayerT:AddSlider("Slider", {
+    Title = "FOV Changer",
+    Description = "",
+    Default = 70, -- Default FOV value
+    Min = 70, -- Minimum FOV value
+    Max = 500, -- Maximum FOV value
+    Rounding = 0, -- Rounding value for the slider
+    Callback = function(Value)
+        game.Workspace.CurrentCamera.FieldOfView = Value
+        print("Field of View changed to:", Value)
+    end
+})
+
+
 Tabs.PlayerT:AddButton({
     Title = "Speed & Jump Changer",
     Callback = function()
