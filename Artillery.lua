@@ -94,7 +94,7 @@ local Slider = Tabs.PlayerT:AddSlider("Slider", {
     Description = "",
     Default = 70, -- Default FOV value
     Min = 70, -- Minimum FOV value
-    Max = 500, -- Maximum FOV value
+    Max = 120, -- Maximum FOV value
     Rounding = 0, -- Rounding value for the slider
     Callback = function(Value)
         game.Workspace.CurrentCamera.FieldOfView = Value
@@ -102,6 +102,18 @@ local Slider = Tabs.PlayerT:AddSlider("Slider", {
     end
 })
 
+local Slider = Tabs.PlayerT:AddSlider("Slider", {
+    Title = "Speed Changer",
+    Description = "",
+    Default = 16, -- Default WalkSpeed value
+    Min = 0, -- Minimum WalkSpeed value
+    Max = 100, -- Maximum WalkSpeed value
+    Rounding = 0, -- Rounding value for the slider
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+        print("WalkSpeed changed to:", Value)
+    end
+})
 
 Tabs.PlayerT:AddButton({
     Title = "Speed & Jump Changer",
