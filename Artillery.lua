@@ -11,7 +11,7 @@ local Window = Fluent:CreateWindow({
     Size = UDim2.fromOffset(450, 300),
     Acrylic = false,
     Theme = "Dark",
-    MinimizeKey = Enum.KeyCode.End
+    MinimizeKey = Enum.KeyCode.RightControl
 })
 
 -- // tabs \\ --
@@ -27,6 +27,9 @@ local Tabs = {
     Muscle = Window:AddTab({ Title = "| Muscle Legend", Icon = "flame" }),
     Lumber = Window:AddTab({ Title = "| Lumber Tycoon 2", Icon = "axe" }),
     Dimension = Window:AddTab({ Title = "| Anime Dimension", Icon = "sword" }),
+    Speed = Window:AddTab({ Title = "| Legend of Speed", Icon = "zap" }),
+    Ninja = Window:AddTab({ Title = "| Ninja Legend", Icon = "sword" }),
+    Revolution = Window:AddTab({ Title = "| AOT Revolution", Icon = "swords" }),
 }
 local Options = Fluent.Options
 
@@ -1292,3 +1295,251 @@ Tabs.Dimension:AddButton({
         end
     end
 })
+
+-- // LEGEND OF SPEED \\ --
+
+Tabs.Speed:AddButton({
+    Title = "Auto Farm",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/StupidProAArsenal/main/main/Legenos%20of%20speedos'))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Speed:AddButton({
+    Title = "Speed Hub X",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Speed:AddButton({
+    Title = "SuPray",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/LiverMods/SuPray/main/Speed-of-Legends.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Speed:AddButton({
+    Title = "Ree Autofarm",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ReeAndArceus/Legends-Of-Speed-Gui/main/Gui"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+-- // Ninja Legends \\ --
+
+Tabs.Ninja:AddButton({
+    Title = "Speed Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Ninja:AddButton({
+    Title = "Proxima Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Ninja:AddButton({
+    Title = "Pure Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://purehub.xyz/Loader", true))()  
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Ninja:AddButton({
+    Title = "PWNER HUB",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/PWNERHUB.lua"))();
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+-- // AOTR \\ --
+
+Tabs.Revolution:AddButton({
+    Title = "Infinix",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            local __function = loadstring(game:HttpGet("https://github.com/Hosvile/InfiniX/releases/latest/download/main.lua", true))
+
+__function(__function)
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Revolution:AddButton({
+    Title = "Tekkit",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/zerunquist/TekkitAotr/main/Tekkit%20Hub"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Revolution:AddButton({
+    Title = "Auto Farm",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/JustLevel/working-newbie/main/AOTRtest.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Revolution:AddButton({
+    Title = "Hawk Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/cilp1/hawkhub./main/aot%20auto%20fram.txt"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+-- // close gui \\ --
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+ScreenGui.Name = ""
+ScreenGui.Parent = game.CoreGui or game.Players.LocalPlayer.PlayerGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BackgroundTransparency = 1
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+ImageButton.Size = UDim2.new(0, 50, 0, 50)
+ImageButton.Draggable = true
+ImageButton.Image = "https://www.roblox.com/asset/?id=18687520299"
+UICorner.Parent = ImageButton
+ImageButton.MouseButton1Down:connect(function()
+       game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
+       game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
+end)
+
+
