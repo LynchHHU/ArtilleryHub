@@ -6,12 +6,12 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 -- // Window \\ --
 local Window = Fluent:CreateWindow({
     Title = "Artillery Hub",
-    SubTitle = "Made By LynchYT",
+    SubTitle = "by LynchYT",
     TabWidth = 160,
-    Size = UDim2.fromOffset(543, 300),
-    Acrylic = false,                        -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "dark",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+    Size = UDim2.fromOffset(450, 300),
+    Acrylic = false,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.End
 })
 
 -- // tabs \\ --
