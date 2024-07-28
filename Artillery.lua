@@ -9,14 +9,14 @@ local Window = Fluent:CreateWindow({
     SubTitle = "by LynchYT",
     TabWidth = 160,
     Size = UDim2.fromOffset(450, 300),
-    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
     Theme = "Darker",
     MinimizeKey = Enum.KeyCode.End -- Used when theres no MinimizeKeybind
 })
 
 -- // tabs \\ --
 local Tabs = {
-    -- // A Games \\ --
+    Information = Window:AddTab({ Title = "| Credits", Icon = "circle-alert" }),
     PlayerT = Window:AddTab({ Title = "| Player Tools", Icon = "hammer" }),
     Arsenal = Window:AddTab({ Title = "| Arsenal", Icon = "flame" }),
     Demonfall = Window:AddTab({ Title = "| Demonfall", Icon = "sword" }),
@@ -29,6 +29,63 @@ local Tabs = {
     Dimension = Window:AddTab({ Title = "| Anime Dimension", Icon = "sword" }),
 }
 local Options = Fluent.Options
+
+-- // Information \\ --
+
+local player = game.Players.LocalPlayer
+local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local executorName = syn and "Synapse" or getexecutorname() -- Assuming you have a function called getexecutorname() to retrieve the executor name
+
+Tabs.Information:AddParagraph({
+    Title = "USERNAME : " .. player.Name,
+    Content = ""
+})
+
+Tabs.Information:AddParagraph({
+    Title = "GAME : " .. gameName,
+    Content = ""
+})
+
+Tabs.Information:AddParagraph({
+    Title = "EXECUTOR : " .. executorName,
+    Content = ""
+})
+
+Tabs.Information:AddButton({
+    Title = "DISCORD SERVER",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            setclipboard("https://discord.com/invite/PEV2FRsrGh")
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Copy Successful",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Information:AddButton({
+    Title = "YOUTUBE CHANNEL",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            setclipboard("https://youtube.com/@lynchgamingyt?si=JpRBdRulxZxABnaX")
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Copy Successful",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
 
 -- // Player \\ --
 
