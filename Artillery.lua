@@ -6,12 +6,12 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 -- // Window \\ --
 local Window = Fluent:CreateWindow({
     Title = "Artillery Hub",
-    SubTitle = "by LynchYT",
+    SubTitle = "Made By LynchYT",
     TabWidth = 160,
-    Size = UDim2.fromOffset(450, 300),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "Darker",
-    MinimizeKey = Enum.KeyCode.End -- Used when theres no MinimizeKeybind
+    Size = UDim2.fromOffset(543, 300),
+    Acrylic = false,                        -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "dark",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 
 -- // tabs \\ --
@@ -34,7 +34,7 @@ local Options = Fluent.Options
 
 local player = game.Players.LocalPlayer
 local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
-local executorName = syn and "Synapse" or getexecutorname() -- Assuming you have a function called getexecutorname() to retrieve the executor name
+local executorName = syn and "Synapse" or getexecutorname()
 
 Tabs.Information:AddParagraph({
     Title = "USERNAME : " .. player.Name,
