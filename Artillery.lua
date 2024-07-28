@@ -14,547 +14,1220 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.End -- Used when theres no MinimizeKeybind
 })
 
+-- // tabs \\ --
 local Tabs = {
---------A
-    UniversalScripts = Window:AddTab({ Title = "| Universal Scripts", Icon = "" }),
-    Arsenal = Window:AddTab({ Title = "| Arsenal Scripts", Icon = "" }),
-    Auracraft = Window:AddTab({ Title = "| Aura Craft Scripts", Icon = "" }),
-    Animedim = Window:AddTab({ Title = "| Anime Dimension Script", Icon = "" }),
-    Animefigters = Window:AddTab({ Title = "| Anime Fighters Script", Icon = "" }),
-    AnimeLST = Window:AddTab({ Title = "| Anime Last Stand Scripts", Icon = "" }),
---------B
-    Bloxfruitss = Window:AddTab({ Title = "| Blox Fruit Scripts", Icon = "" }),
-    Beeswarm = Window:AddTab({ Title = "| Bee Swarm Scripts", Icon = "" }),
---------C
-
---------D
-    Demonfall = Window:AddTab({ Title = "| Demonfall Scripts", Icon = "" }),
-    Demonpiece = Window:AddTab({ Title = "| Demon Piece Scripts", Icon = "" }),
---------E
---------F
---------G
---------H
---------I
---------J
-Jailbreak = Window:AddTab({ Title = "| Jailbreak Scripts", Icon = "" }),
---------K
---------L
-lumbertycoon = Window:AddTab({ Title = "| Lumber Tycoon 2 Scripts", Icon = "" }),
---------M
-muscleL = Window:AddTab({ Title = "| Muscle Legends Scripts", Icon = "" }),
---------N
---------O
---------P
---------Q
---------R
---------S
---------T
---------U
---------V
---------W
---------X
---------Y
---------Z
+    -- // A Games \\ --
+    PlayerT = Window:AddTab({ Title = "| Player Tools", Icon = "hammer" }),
+    Arsenal = Window:AddTab({ Title = "| Arsenal", Icon = "flame" }),
+    Demonfall = Window:AddTab({ Title = "| Demonfall", Icon = "sword" }),
+    BSS = Window:AddTab({ Title = "| Bee Swarm", Icon = "flower" }),
+    JBK = Window:AddTab({ Title = "| Jailbreak", Icon = "dollar-sign" }),
+    ProjectSlayer = Window:AddTab({ Title = "| Project Slayer", Icon = "swords" }),
+    Bloxfruit = Window:AddTab({ Title = "| BloxFruit", Icon = "swords" }),
+    Muscle = Window:AddTab({ Title = "| Muscle Legend", Icon = "flame" }),
+    Lumber = Window:AddTab({ Title = "| Lumber Tycoon 2", Icon = "axe" }),
+    Dimension = Window:AddTab({ Title = "| Anime Dimension", Icon = "sword" }),
 }
+local Options = Fluent.Options
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Universal Script
+-- // Player \\ --
 
-Tabs.UniversalScripts:AddButton({
-    Title = "Keyboard Gen",
+Tabs.PlayerT:AddButton({
+    Title = "Speed & Jump Changer",
     Callback = function()
-        loadstring(game:HttpGet("https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%2520From%2520Ohio%2520Fr%2520Fr"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://pastebin.com/raw/mekUsJ6i", true))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.UniversalScripts:AddButton({
-    Title = "Fly",
+Tabs.PlayerT:AddButton({
+    Title = "Dark Dex",
     Callback = function()
-        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Mobile-fly-script-(Arceus-x)-2042"))()
+        local executed = false
+
+        if not executed then
+            local __function = loadstring(game:HttpGet("https://github.com/Hosvile/DEX-Explorer/releases/latest/download/main.lua", true))
+
+__function(__function)
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.UniversalScripts:AddButton({
-    Title = "Hydroxide",
-    Callback = function()
-        loadstring(game:HttpGet("https://pastebin.com/raw/36kVYSdR"))()
-    end
-})
-
-Tabs.UniversalScripts:AddButton({
+Tabs.PlayerT:AddButton({
     Title = "Simple Spy",
     Callback = function()
-        loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RS/main/SimpleSpyMobile"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.UniversalScripts:AddButton({
-    Title = "Dark Dex V3",
+Tabs.PlayerT:AddButton({
+    Title = "Inf yield",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.UniversalScripts:AddButton({
-    Title = "Infinite Yield",
+Tabs.PlayerT:AddButton({
+    Title = "KeyNum Gen",
     Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%2520From%2520Ohio%2520Fr%2520Fr"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.UniversalScripts:AddButton({
-    Title = "Hitbox Expander",
+Tabs.PlayerT:AddButton({
+    Title = "Fly",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Mobile-fly-script-(Arceus-x)-2042"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.UniversalScripts:AddButton({
-    Title = "On Screen Keyboard",
+Tabs.PlayerT:AddButton({
+    Title = "HitboxExpander",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/GGH52lan/GGH52lan/main/keyboard.txt"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Arsenal
+Tabs.PlayerT:AddButton({
+    Title = "Chat Bypass",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://pastebin.com/raw/T4FEyvHH"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.PlayerT:AddButton({
+    Title = "Anti Afk",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://pastebin.com/raw/TRCYuX46"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.PlayerT:AddButton({
+    Title = "Fps & Ping Counter",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://rawscripts.net/raw/Baseplate-Fps-and-ping-Counter-Script-7186"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.PlayerT:AddButton({
+    Title = "FPS Booster",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://pastebin.com/raw/fh47YgNA"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
 
 
--- VIP Script Hubs --
+-- // Arsenal Scripts \\ --
 
 Tabs.Arsenal:AddButton({
     Title = "Reaper Hub",
     Callback = function()
-        loadstring((http.request{Url="https://reaperscripts.com/loader?l=1"}).Body,"0zek8y2bld7.qowl6c7o~1")()
+        local executed = false
+
+        if not executed then
+            loadstring((http.request{Url="https://reaperscripts.com/loader?l=1"}).Body,"0zek8y2bld7.qowl6c7o~1")()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
 Tabs.Arsenal:AddButton({
     Title = "AdvanceTech",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AdvanceFTeam/Our-Scripts/main/AdvanceTech/Arsenal_V1.6.lua"))()
-    end
-})
+        local executed = false
 
-Tabs.Arsenal:AddButton({
-    Title = "Thunder Client",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/andrewdarkyyofficial/thunderclient/main/main.lua"))()
-    end
-})
-
-Tabs.Arsenal:AddButton({
-    Title = "Tbao Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/ArsenalTbaoHubNew"))()
-    end
-})
-
-Tabs.Arsenal:AddButton({
-    Title = "QP Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/QPScript/Script/main/Arsenal.txt"))()
-    end
-})
-
-Tabs.Arsenal:AddButton({
-    Title = "MidnightCC",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/laeraz/midnightcc/main/public.lua"))()
-    end
-})
-
-Tabs.Arsenal:AddButton({
-    Title = "Nexware",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DatMxkey/Nexware/main/loader.lua"))()
-    end
-})
-
-Tabs.Arsenal:AddButton({
-    Title = "Ura Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/yoboyghxst/Uraset/main/Uraset.lua"))()
-    end
-})
-
-Tabs.Arsenal:AddButton({
-    Title = "Elijah Hub",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/ElijahGamingRBLX/Elijah-Hub-Arsenal/main/ElijahHubArsenal.lua'))()
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AdvanceFTeam/Our-Scripts/main/AdvanceTech/Arsenal_V1.6.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
 Tabs.Arsenal:AddButton({
     Title = "RSO",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/RSOscrip/Arsenal/main/RSOscrip"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/RSOscrip/Arsenal/main/RSOscrip"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Aura Craft
-
-Tabs.Auracraft:AddButton({
-    Title = "Reaper Hub",
+Tabs.Arsenal:AddButton({
+    Title = "Nexware",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DatMxkey/Nexware/main/loader.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.Auracraft:AddButton({
-    Title = "Tora Script",
+Tabs.Arsenal:AddButton({
+    Title = "Ura Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraScript/Script/main/AuraCraft", true))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/yoboyghxst/Uraset/main/Uraset.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Anime Dimension
-
-Tabs.Animedim:AddButton({
-    Title = "Silver Hub",
+Tabs.Arsenal:AddButton({
+    Title = "Midnight CC",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhau207/SilverHub/main/Protected_9892584729983615.lua"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/laeraz/midnightcc/main/public.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.Animedim:AddButton({
-    Title = "CanisLupusX Hub",
+Tabs.Arsenal:AddButton({
+    Title = "Elijah Hub",
     Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/CanisLupusXL/CanislupusXHub/main/Anime_Dimension_Simulator'))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ElijahGamingRBLX/Elijah-Hub-Arsenal/main/ElijahHubArsenal.lua'))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Anime Fighters
-
-Tabs.Animefigters:AddButton({
-    Title = "Reaper Hub",
+Tabs.Arsenal:AddButton({
+    Title = "Tbao Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/ArsenalTbaoHubNew"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.Animefigters:AddButton({
-    Title = "Yut V2",
+Tabs.Arsenal:AddButton({
+    Title = "QP Hub",
     Callback = function()
-        repeat wait() until game:IsLoaded()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Binintrozza/yutv2e/main/afss"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/QPScript/Script/main/Arsenal.txt"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.Animefigters:AddButton({
-    Title = "Zer0 Hub",
+Tabs.Arsenal:AddButton({
+    Title = "Thunder Client",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/MainScript.lua"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/andrewdarkyyofficial/thunderclient/main/main.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Anime Last Stand
+-- // DEMONFALL \\ --
 
-Tabs.AnimeLST:AddButton({
-    Title = "Buang Hub",
+Tabs.Demonfall:AddButton({
+    Title = "L4BIB Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/buang5516/buanghub/main/BUANGHUB.lua"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/LabibKazi858/Scripts/main/DemonFallMobile"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
-
-Tabs.AnimeLST:AddButton({
-    Title = "Demonic Hub",
-    Callback = function()
-        getgenv().ValidateType = "Key" -- You can use "Whitelist" too! + pls don't remove nothing from this script or it can have errors.
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Prosexy/Demonic-HUB-V2/main/DemonicHub_V2.lua", true))()
-    end
-})
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------BloxFruit
-
-Tabs.Bloxfruitss:AddButton({
-    Title = "Reaper Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
-    end
-})
-
-Tabs.Bloxfruitss:AddButton({
-    Title = "Alchemy Hub PVP",
-    Callback = function()
-        _G.Aimbot = true
-loadstring(game:HttpGet("https://luable.top/acm"))()
-    end
-})
-
-Tabs.Bloxfruitss:AddButton({
-    Title = "RinX Hub",
-    Callback = function()
-        _G.Language = "English"
-loadstring(game:HttpGetAsync"https://github.com/RinXHub/RinX/raw/main/new.lua")()
-    end
-})
-
-Tabs.Bloxfruitss:AddButton({
-    Title = "MinGaming Hub",
-    Callback = function()
-        _G.LoadUiFast = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CheemsNhuChiAl/MinGamingHub/main/mingamingupdatenew"))()
-    end
-})
-
-Tabs.Bloxfruitss:AddButton({
-    Title = "Quartyx",
-    Callback = function()
-        loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
-    end
-})
-
-Tabs.Bloxfruitss:AddButton({
-    Title = "RedZ Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
-    end
-})
-
-Tabs.Bloxfruitss:AddButton({
-    Title = "Tsuo Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Tsuo7/TsuoHub/main/Tsuoscripts"))()
-    end
-})
-
-Tabs.Bloxfruitss:AddButton({
-    Title = "Atreus Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Atreus-Hub/Atreus-Hub-V1/main/Blox%20Fruits.lua"))()
-    end
-})
-
-Tabs.Bloxfruitss:AddButton({
-    Title = "LunarX Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/NguyenLam2504/LunarXHubNextGeneration/main/GameShit.lua"))()
-    end
-})
-
-Tabs.Bloxfruitss:AddButton({
-    Title = "Zin Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiSupremacy/Loader.xyz/main/ZINHUBLOADER.lua"))()
-    end
-})
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Bee Swarm
-
-Tabs.Beeswarm:AddButton({
-    Title = "Macro V3",
-    Callback = function()
-        loadstring(game:HttpGet("https://www.macrov2-script.xyz/macrov3.lua"))()
-    end
-})
-
-Tabs.Beeswarm:AddButton({
-    Title = "Unnamed GUI",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/29"))()
-    end
-})
-
-Tabs.Beeswarm:AddButton({
-    Title = "Kometa",
-    Callback = function()
-        loadstring(game:HttpGet('https://s.kometa.ga/kometa.lua'))()
-    end
-})
-
-Tabs.Beeswarm:AddButton({
-    Title = "Adel Hub",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub/main/Main.lua'))()
-    end
-})
-
-Tabs.Beeswarm:AddButton({
-    Title = "Histy Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Histy"))()
-    end
-})
-
-Tabs.Beeswarm:AddButton({
-    Title = "Astronomic Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://astronomic.vercel.app"))()
-    end
-})
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Demonfall
 
 Tabs.Demonfall:AddButton({
     Title = "Noob Hub",
     Callback = function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/NOOBHUBX/DemonFall/main/NOOB%20HUB.Lua'),true))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/NOOBHUBX/DemonFall/main/NOOB%20HUB.Lua'),true))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
 Tabs.Demonfall:AddButton({
     Title = "Lazy Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://github.com/LioK251/Scripts/raw/main/lazyhub.lua"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://github.com/LioK251/Scripts/raw/main/lazyhub.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
 Tabs.Demonfall:AddButton({
     Title = "Leanfall",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/KeoneGithub/KeoneGithub/main/DemonCockCandy",true))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/KeoneGithub/KeoneGithub/main/DemonCockCandy",true))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Demon Piece
-
-Tabs.Demonpiece:AddButton({
-    Title = "Demonic Hub",
-    Callback = function()
-        getgenv().ValidateType = "Key" -- You can use "Whitelist" too! + pls don't remove nothing from this script or it can have errors.
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Prosexy/Demonic-HUB-V2/main/DemonicHub_V2.lua", true))()
-    end
-})
-
-Tabs.Demonpiece:AddButton({
+Tabs.Demonfall:AddButton({
     Title = "NS Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/HenSeu87PofghYT/ALL-IN-ONE/main/NSHUBV2"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/df/main/bt"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.Demonpiece:AddButton({
-    Title = "OMG Hub",
+-- // BEESWARM \\ --
+
+Tabs.BSS:AddButton({
+    Title = "Macro V3",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))() 
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://www.macrov2-script.xyz/macrov3.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.Demonpiece:AddButton({
-    Title = "Nexus Hub",
+Tabs.BSS:AddButton({
+    Title = "Bacon Boss",
     Callback = function()
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/CrazyHub123/NexusHubMain/main/Main.lua", true))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconBossScript/BeeSwarmSim/main/BeeSwarmSim"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Jailbreak
+Tabs.BSS:AddButton({
+    Title = "RBScr1pts HUB",
+    Callback = function()
+        local executed = false
 
-Tabs.Demonpiece:AddButton({
+        if not executed then
+            loadstring(game:HttpGet('https://pastebin.com/raw/N4weEdmM'))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.BSS:AddButton({
+    Title = "Histy",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Histy"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.BSS:AddButton({
+    Title = "Adel Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub/main/Main.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+-- // Jailbreak \\ --
+
+Tabs.JBK:AddButton({
+    Title = "ProjectAuto V5 (Free trial)",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet('https://scripts.projectauto.xyz/AutoRobV5Beta'))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.JBK:AddButton({
+    Title = "Cash Farm",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://cashfarm.lol/AutoCrateFree.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.JBK:AddButton({
     Title = "Project Auto",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Pxsta72/ProjectAuto/main/AutoRobV4Release"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet('https://scripts.projectauto.xyz/AutoRobV4'))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.Demonpiece:AddButton({
-    Title = "Universal Hub",
+Tabs.JBK:AddButton({
+    Title = "Universal Farm",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Lt2
+-- // Project Slayer \\ --
 
-Tabs.lumbertycoon:AddButton({
-    Title = "Butter Hub",
+Tabs.ProjectSlayer:AddButton({
+    Title = "Zeta Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://scriptblox.com/raw/Lumber-Tycoon-2-ButterHub-8098"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6475af01399cf2cf12c0f5c99ac80791.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.lumbertycoon:AddButton({
-    Title = "Dark X",
+Tabs.ProjectSlayer:AddButton({
+    Title = "Demonic Hub",
     Callback = function()
-        loadstring(game:HttpGet"https://raw.githubusercontent.com/darkxwin/darkxsourcethinkyoutousedarkx/main/darkx")()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/bilalquadri/Project-slayers/main/Demonic%20Key%20System'))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.lumbertycoon:AddButton({
-    Title = "Lua Ware",
+Tabs.ProjectSlayer:AddButton({
+    Title = "Map1 Farm",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/washingtontrichkid2/Newgay/main/ProjectSlayer"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.lumbertycoon:AddButton({
-    Title = "Step Shop Mobile",
+Tabs.ProjectSlayer:AddButton({
+    Title = "Map2 Farm",
     Callback = function()
-        loadstring(Game:HttpGet("https://bit.ly/StepShopMobile"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/washingtontrichkid2/Newgay/main/ProjectSlayerMap2"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.lumbertycoon:AddButton({
-    Title = "Toads",
+Tabs.ProjectSlayer:AddButton({
+    Title = "Mugen Farm",
     Callback = function()
-        loadstring(game:HttpGet("https://bit.ly/3x90l99"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/washingtontrichkid2/Newgay/main/Mugen"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Muscle Legends
+-- // Bloxfruit \\ --
 
-Tabs.muscleL:AddButton({
-    Title = "Mad Hub",
+Tabs.Bloxfruit:AddButton({
+    Title = "W-Azure",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/maddjester/MaddHub/main/GetKey.lua"))() 
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.muscleL:AddButton({
+Tabs.Bloxfruit:AddButton({
     Title = "Speed Hub",
     Callback = function()
-        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.muscleL:AddButton({
-    Title = "Rolly Hub",
+Tabs.Bloxfruit:AddButton({
+    Title = "Hoho Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Rolly-Hub-I-6-GAMES-SUPPORTED-4511", true))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.muscleL:AddButton({
+Tabs.Bloxfruit:AddButton({
+    Title = "BT Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGetAsync("https://lua-library.btteam.net/script-auth.txt"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Bloxfruit:AddButton({
+    Title = "Script Blox",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/Script-Blox/Script/main/Script-Blox'))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Bloxfruit:AddButton({
+    Title = "MinGamingHub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/CheemsNhuChiAl/MinGamingHub/main/mingamingupdatenew"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Bloxfruit:AddButton({
+    Title = "RedZ Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Bloxfruit:AddButton({
+    Title = "ChestFarm",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/SxedraReal/BloxFruit/main/ChestFarm%20Free"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Bloxfruit:AddButton({
+    Title = "Winterhub_V2",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            local pid = game.PlaceId
+if pid == 2753915549 or pid == 4442272183 or pid == 7449423635 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Yuri/main/Winterhub_V2.lua"))()
+end
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Bloxfruit:AddButton({
+    Title = "Xero Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/verudous/Xero-Hub/main/main.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+-- // MUSCLE LEGEND \\ --
+
+Tabs.Muscle:AddButton({
+    Title = "Mad Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/maddjester/MaddHub/main/GetKey.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Muscle:AddButton({
+    Title = "SpeedHubX",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Speed-Hub-X/main/SpeedHubX"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+
+Tabs.Muscle:AddButton({
     Title = "Auto Farm",
     Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/jynzl/main/main/Musclas%20Legenos.lua'))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/jynzl/main/main/Musclas%20Legenos.lua'))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
-Tabs.muscleL:AddButton({
-    Title = "Unnamed GUI",
+
+Tabs.Muscle:AddButton({
+    Title = "Unnamed Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
     end
 })
 
+-- // Lumber Tycoon 2 \\ --
 
--- Addons:
--- SaveManager (Allows you to have a configuration system)
--- InterfaceManager (Allows you to have a interface managment system)
+Tabs.Lumber:AddButton({
+    Title = "Toads",
+    Callback = function()
+        local executed = false
 
--- Hand the library over to our managers
-SaveManager:SetLibrary(Fluent)
-InterfaceManager:SetLibrary(Fluent)
+        if not executed then
+            loadstring(game:HttpGet("https://bit.ly/3x90l99"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
 
--- Ignore keys that are used by ThemeManager.
--- (we dont want configs to save themes, do we?)
-SaveManager:IgnoreThemeSettings()
+Tabs.Lumber:AddButton({
+    Title = "StepShopMobile",
+    Callback = function()
+        local executed = false
 
--- You can add indexes of elements the save manager should ignore
-SaveManager:SetIgnoreIndexes({})
+        if not executed then
+            loadstring(Game:HttpGet("https://bit.ly/StepShopMobile"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
 
--- use case for doing it this way:
--- a script hub could have themes in a global folder
--- and game configs in a separate folder per game
-InterfaceManager:SetFolder("FluentScriptHub")
-SaveManager:SetFolder("FluentScriptHub/specific-game")
+Tabs.Lumber:AddButton({
+    Title = "LuaWareLoader",
+    Callback = function()
+        local executed = false
 
-InterfaceManager:BuildInterfaceSection(Tabs.Settings)
-SaveManager:BuildConfigSection(Tabs.Settings)
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
 
+Tabs.Lumber:AddButton({
+    Title = "Dark X",
+    Callback = function()
+        local executed = false
 
-Window:SelectTab(1)
-SaveManager:LoadAutoloadConfig(
-)
+        if not executed then
+            loadstring(game:HttpGet"https://raw.githubusercontent.com/darkxwin/darkxsourcethinkyoutousedarkx/main/darkx")()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Lumber:AddButton({
+    Title = "Butter Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://scriptblox.com/raw/Lumber-Tycoon-2-ButterHub-8098"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+-- // Anime Dimension \\ --
+
+Tabs.Dimension:AddButton({
+    Title = "CanislupusX Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/CanisLupusXL/CanislupusXHub/main/Anime_Dimension_Simulator'))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Dimension:AddButton({
+    Title = "Silver Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhau207/SilverHub/main/Protected_9892584729983615.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Dimension:AddButton({
+    Title = "OMG Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Dimension:AddButton({
+    Title = "Bubble",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/fleowo/Bubble/request/Loader.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Dimension:AddButton({
+    Title = "HolyShz Hub",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/siradaniy/Script_HSz/main/HSz_Main.lua"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+-- // Gui Hide/Show \\ --
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+ScreenGui.Name = ""
+ScreenGui.Parent = game.CoreGui or game.Players.LocalPlayer.PlayerGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BackgroundTransparency = 1
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+ImageButton.Size = UDim2.new(0, 50, 0, 50)
+ImageButton.Draggable = true
+ImageButton.Image = "https://www.roblox.com/asset/?id=18687520369"
+UICorner.Parent = ImageButton
+ImageButton.MouseButton1Down:connect(function()
+       game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
+       game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
+end)
