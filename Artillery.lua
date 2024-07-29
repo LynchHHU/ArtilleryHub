@@ -17,6 +17,7 @@ local Window = Fluent:CreateWindow({
 -- // tabs \\ --
 local Tabs = {
     Information = Window:AddTab({ Title = "| Credits", Icon = "circle-alert" }),
+    Admin = Window:AddTab({ Title = "| Admin CMD", Icon = "loader-pinwheel" }),
     PlayerT = Window:AddTab({ Title = "| Player Tools", Icon = "hammer" }),
     Arsenal = Window:AddTab({ Title = "| Arsenal", Icon = "flame" }),
     Demonfall = Window:AddTab({ Title = "| Demonfall", Icon = "sword" }),
@@ -82,6 +83,98 @@ Tabs.Information:AddButton({
             Fluent:Notify({
                 Title = "Notification",
                 Content = "Copy Successful",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+-- // Admin \\ --
+
+Tabs.Admin:AddButton({
+    Title = "DomainX",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/DomainX/main/source",true))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Admin:AddButton({
+    Title = "Fates Admin",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua", true))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Admin:AddButton({
+    Title = "CMD X",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Admin:AddButton({
+    Title = "Nameless Admin",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))();
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
+                SubContent = "",
+                Duration = 5
+            })
+            executed = true
+        end
+    end
+})
+
+Tabs.Admin:AddButton({
+    Title = "Prison Life Admin",
+    Callback = function()
+        local executed = false
+
+        if not executed then
+            loadstring(game:HttpGet("https://scriptblox.com/raw/Prison-Life-Prizz-Admin-14511"))()
+            Fluent:Notify({
+                Title = "Notification",
+                Content = "Script Executed Successfully",
                 SubContent = "",
                 Duration = 5
             })
